@@ -10,16 +10,16 @@ lazy val fs2Version = "3.13.0"
 lazy val h2Version = "2.4.240"
 lazy val hikariVersion = "7.0.2" // N.B. Hikari v4 introduces a breaking change via slf4j v2
 lazy val kindProjectorVersion = "0.11.2"
-lazy val mysqlVersion = "9.6.0"
+lazy val mysqlVersion = "9.7.0"
 lazy val log4catsVersion = "2.8.0"
 lazy val postGisVersion = "2025.1.1"
 lazy val postgresVersion = "42.7.10"
 lazy val refinedVersion = "0.11.3"
 lazy val scalaCollectionCompatVersion = "2.14.0"
 lazy val scalaCheckVersion = "1.15.4"
-lazy val scalatestVersion = "3.2.18"
-lazy val munitVersion = "1.2.4"
-lazy val otel4sVersion = "0.15.2"
+lazy val scalatestVersion = "3.2.20"
+lazy val munitVersion = "1.3.0"
+lazy val otel4sVersion = "0.16.0"
 lazy val otelInstrumentationVersion = "2.26.0-alpha"
 lazy val shapelessVersion = "2.3.13"
 lazy val silencerVersion = "1.7.1"
@@ -31,7 +31,7 @@ lazy val allScalaVersions = List(scala212Version, scala213Version, scala3Version
 // scala-steward:off
 lazy val slf4jVersion = "1.7.36"
 // scala-steward:on
-lazy val weaverVersion = "0.11.3"
+lazy val weaverVersion = "0.12.0"
 
 // Basic versioning and publishing stuff
 ThisBuild / tlBaseVersion := "1.0"
@@ -179,7 +179,7 @@ lazy val commonSettings =
       // MUnit
       libraryDependencies ++= Seq(
         "org.typelevel" %% "scalacheck-effect-munit" % "2.1.0" % Test,
-        "org.typelevel" %% "munit-cats-effect" % "2.1.0" % Test,
+        "org.typelevel" %% "munit-cats-effect" % "2.2.0" % Test,
         "org.typelevel" %% "cats-effect-testkit" % catsEffectVersion % Test
       ),
       testFrameworks += new TestFramework("munit.Framework"),
