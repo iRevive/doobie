@@ -19,7 +19,7 @@ lazy val scalaCollectionCompatVersion = "2.14.0"
 lazy val scalaCheckVersion = "1.15.4"
 lazy val scalatestVersion = "3.2.20"
 lazy val munitVersion = "1.3.0"
-lazy val otel4sVersion = "0.16.0"
+lazy val otel4sVersion = "1.0.0"
 lazy val otelInstrumentationVersion = "2.26.0-alpha"
 lazy val shapelessVersion = "2.3.13"
 lazy val silencerVersion = "1.7.1"
@@ -621,7 +621,7 @@ lazy val refined = projectMatrix
 
 lazy val otel4s = projectMatrix
   .in(file("modules/otel4s"))
-  .enablePlugins(AutomateHeaderPlugin, NoPublishPlugin)
+  .enablePlugins(AutomateHeaderPlugin)
   .dependsOn(core)
   .settings(doobieSettings)
   .settings(
